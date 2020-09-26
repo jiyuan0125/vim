@@ -200,9 +200,9 @@ set background=dark
 
 " Required as some plugins will overwrite
 call s:h('Normal', s:fg, g:dracula_colorterm || has('gui_running') ? s:bg : s:none )
-call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
-call s:h('StatusLineNC', s:none, s:bglight)
-call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
+call s:h('StatusLine', s:none, s:bglighter)
+call s:h('StatusLineNC', s:comment, s:bgdark)
+call s:h('StatusLineTerm', s:none, s:bglighter)
 call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
@@ -281,7 +281,7 @@ hi! link Boolean Constant
 hi! link Float Constant
 
 hi! link Identifier DraculaFg
-hi! link Function DraculaGreen
+hi! link Function DraculaCyan
 
 hi! link Statement DraculaPink
 hi! link Conditional DraculaPink
